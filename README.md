@@ -4,7 +4,7 @@ This library is a helper library for atsooe, the PowerShell automation platform.
 
 TODO:
 
-* Add an object serialiser class
+* ~~Add an SendObjectAsMessage method to RabbitMqMessageSender~~
 * Add unit tests
 * Add error handling
 * Add support for additional Exchange types
