@@ -7,5 +7,6 @@ namespace CannedLogic.RabbitMqMessaging
     public interface IMessageSender : IDisposable
     {
         public void PublishMessage(string message);
+        public void PublishObjectAsMessage(object o);
     }
 }

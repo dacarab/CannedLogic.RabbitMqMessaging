@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Text;
+using Newtonsoft.Json;
 using RabbitMQ.Client;
 
 namespace CannedLogic.RabbitMqMessaging
@@ -88,6 +88,12 @@ namespace CannedLogic.RabbitMqMessaging
             }
 
             disposed = true;
+        }
+
+        public void PublishObjectAsMessage(object o)
+        {
+            string message = JsonConvert.SerializeObject(o);
+            PublishMessage(message);
         }
 
         ~RabbitMqMessageSender()
